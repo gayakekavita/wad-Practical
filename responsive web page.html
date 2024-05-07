@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Registration Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <form action="#">
+    <h2>Register</h2>
+    <div class="input-group">
+      <input type="text" id="name" required>
+      <label for="name">Name</label>
+    </div>
+    <div class="input-group">
+      <input type="email" id="email" required>
+      <label for="email">Email</label>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" required>
+      <label for="password">Password</label>
+    </div>
+    <button type="submit" onClick="fun()">Register</button>
+  </form>
+</div>
+</body>
+<script>
+   function fun() {
+    let name = document.getElementById('name');
+    let mail = document.getElementById('email');
+    let pass = document.getElementById('password');
+    
+    if (name.value.trim() === '' || mail.value.trim() === '' || pass.value.trim() === '') {
+        window.alert('Fill all the details');
+    } else {
+        window.alert('Submitted successfully!');
+    }
+}
+
+</script>
+</html>
